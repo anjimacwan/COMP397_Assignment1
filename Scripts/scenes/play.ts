@@ -17,7 +17,7 @@ module scenes {
         public start(): void {
 
             // add the PLAY label to the scene
-            this._playLabel = new createjs.Text("Game Scene", "60px Consolas", "#000000");
+            this._playLabel = new createjs.Text("You are being chased by vampires! You need to reach to church before they catch you! Choose left or right side at this point!", "60px Consolas", "#000000");
             this._playLabel.regX = this._playLabel.getMeasuredWidth() * 0.5;
             this._playLabel.regY = this._playLabel.getMeasuredHeight() * 0.5;
             this._playLabel.x = config.Screen.CENTER_X;

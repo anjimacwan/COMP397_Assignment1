@@ -12,9 +12,18 @@ var over;
 function init() {
     // create a reference the HTML canvas Element
     canvas = document.getElementById("canvas");
+    /*var ctx=canvas.msGetInputContext();
+    
+    var bg=new Image();
+    bg.src="../../Assets/images/VampireOutcast.jpg";
+    
+    bg.onload=function(){
+        
+    
+    }*/
     // create our main display list container
     stage = new createjs.Stage(canvas);
-    stage.toDataURL("blue", "init");
+    //stage.toDataURL("blue","init");
     // Enable mouse events
     stage.enableMouseOver(20);
     // set the framerate to 60 frames per second

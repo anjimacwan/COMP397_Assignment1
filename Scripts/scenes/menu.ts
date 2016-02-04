@@ -21,11 +21,11 @@ module scenes {
             bg.anchor.y=0;
             bg.position.x=50;
             bg.position.y=50; */
-            this._gameLabel = new createjs.Text("Welcome to Vampire Hunt !!", "60px Consolas", "#000000");
+            this._gameLabel = new createjs.Text("Welcome to Vampire Hunt !!", "20px Consolas", "#000000");
             this._gameLabel.regX = this._gameLabel.getMeasuredWidth() * 0.5;
-            this._gameLabel.regY = this._gameLabel.getMeasuredHeight() * 0.5;
+            this._gameLabel.regY = 120;
             this._gameLabel.x = config.Screen.CENTER_X;
-            this._gameLabel.y = config.Screen.CENTER_Y;
+            this._gameLabel.y = config.Screen.HEIGHT= 120;
             this.addChild(this._gameLabel);
             //this.addChild(bg);
 

@@ -16,11 +16,11 @@ var scenes;
         // Start Method
         Play.prototype.start = function () {
             // add the PLAY label to the scene
-            this._playLabel = new createjs.Text("You are being chased by vampires! You need to reach to church before they catch you! Choose left or right side at this point!", "60px Consolas", "#000000");
+            this._playLabel = new createjs.Text("You are being chased by vampires! You need to reach to church before they catch you! Choose left or right side at this point!", "20px Consolas", "white");
             this._playLabel.regX = this._playLabel.getMeasuredWidth() * 0.5;
-            this._playLabel.regY = this._playLabel.getMeasuredHeight() * 0.5;
+            this._playLabel.regY = 120;
             this._playLabel.x = config.Screen.CENTER_X;
-            this._playLabel.y = config.Screen.CENTER_Y;
+            this._playLabel.y = 120;
             this.addChild(this._playLabel);
             // add the NEXT button to the PLAY scene
             this._nextButton = new objects.Button("NextButton", config.Screen.CENTER_X + 100, config.Screen.CENTER_Y + 60);

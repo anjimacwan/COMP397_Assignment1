@@ -25,7 +25,7 @@ var scenes;
             this._gameLabel.regX = this._gameLabel.getMeasuredWidth() * 0.5;
             this._gameLabel.regY = 120;
             this._gameLabel.x = config.Screen.CENTER_X;
-            this._gameLabel.y = config.Screen.HEIGHT = 120;
+            this._gameLabel.y = 120;
             this.addChild(this._gameLabel);
             //this.addChild(bg);
             // add the START button to the MENU scene

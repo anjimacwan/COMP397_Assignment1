@@ -17,8 +17,10 @@ function init():void {
     // create a reference the HTML canvas Element
     canvas = document.getElementById("canvas");
     
+    
     // create our main display list container
     stage = new createjs.Stage(canvas);
+    stage.toDataURL("blue","init");
     
     // Enable mouse events
     stage.enableMouseOver(20);

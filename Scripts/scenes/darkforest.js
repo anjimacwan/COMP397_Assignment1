@@ -47,13 +47,13 @@ var scenes;
         // NEXT Button click event handler
         DarkForest.prototype._nextButtonClick = function (event) {
             // Switch to the OVER Scene
-            scene = config.Scene.OVER;
+            scene = config.Scene.DEADEND2;
             changeScene();
         };
         // BACK Button click event handler
         DarkForest.prototype._backButtonClick = function (event) {
             // Switch to the OVER Scene
-            scene = config.Scene.OVER;
+            scene = config.Scene.DEADEND1;
             changeScene();
         };
         // START Button click event handler

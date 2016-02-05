@@ -1,6 +1,6 @@
-// OVER SCENE
+// DEADEND 2 SCENE
 module scenes {
-    export class Over extends objects.Scene {
+    export class DeadEnd2 extends objects.Scene {
         //PRIVATE INSTANCE VARIABLES ++++++++++++
         private _overLabel: createjs.Text;
         private _backButton: objects.Button;
@@ -15,8 +15,8 @@ module scenes {
         // Start Method
         public start(): void {
 
-            // add the PLAY label to the scene
-            this._overLabel = new createjs.Text("Arrrgghhh!!! They caught you and killed you \n\nGame Over!", "20px Consolas", "white");
+            // add the DeadEnd1 label to the scene
+            this._overLabel = new createjs.Text("Arrrgghhh!!! You reached dead end 2! They caught you and killed you \n\nGame Over!", "20px Consolas", "white");
             this._overLabel.regX = 0;
             this._overLabel.regY = 0;
             this._overLabel.x = 0;

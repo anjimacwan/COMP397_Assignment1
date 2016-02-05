@@ -1,7 +1,7 @@
-// DESERT SCENE
+// CHURCHTUNNEL SCENE
 
 module scenes {
-    export class Desert extends objects.Scene {
+    export class ChurchTunnel extends objects.Scene {
         //PRIVATE INSTANCE VARIABLES ++++++++++++
         private _label:createjs.Text;
         private _startButton:objects.Button;
@@ -19,7 +19,7 @@ module scenes {
         public start(): void {
 
             // add the DESERT label to the scene
-            this._label = new createjs.Text("You have entered the Desert! \n\nVampires are looking for you! \n\nDon't let them find you!", "20px Consolas", "white");
+            this._label = new createjs.Text("You have entered the direct path to tunnel now! \n\nChoose this final path very very carefully!! \n\nIf you choose the correct path now, you will win the game! \n\n All the best!!!!", "20px Consolas", "white");
             this._label.regX = 0;
             this._label.regY = 0;
             this._label.x = 0;
@@ -71,20 +71,20 @@ module scenes {
         // NEXT Button click event handler
         private _nextButtonClick(event: createjs.MouseEvent) {
             // Switch to the OVER Scene
-            scene = config.Scene.DEADEND4;
+            scene = config.Scene.CHURCH;
             changeScene();
         }
         
         // BACK Button click event handler
         private _backButtonClick(event: createjs.MouseEvent) {
             // Switch to the OVER Scene
-            scene = config.Scene.DEADEND3;
+            scene = config.Scene.DEADEND7;
             changeScene();
         }
         // START Button click event handler
         private _startButtonClick(event: createjs.MouseEvent) {
             // Switch to the OVER Scene
-            scene = config.Scene.PLAY;
+            scene = config.Scene.TUNNEL;
             changeScene();
         }
     }

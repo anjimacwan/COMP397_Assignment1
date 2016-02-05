@@ -1,4 +1,4 @@
-// DESERT SCENE
+// CHURCHTUNNEL SCENE
 var __extends = (this && this.__extends) || function (d, b) {
     for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
     function __() { this.constructor = d; }
@@ -6,17 +6,17 @@ var __extends = (this && this.__extends) || function (d, b) {
 };
 var scenes;
 (function (scenes) {
-    var Desert = (function (_super) {
-        __extends(Desert, _super);
+    var ChurchTunnel = (function (_super) {
+        __extends(ChurchTunnel, _super);
         // CONSTRUCTOR ++++++++++++++++++++++
-        function Desert() {
+        function ChurchTunnel() {
             _super.call(this);
         }
         // PUBLIC METHODS +++++++++++++++++++++
         // Start Method
-        Desert.prototype.start = function () {
+        ChurchTunnel.prototype.start = function () {
             // add the DESERT label to the scene
-            this._label = new createjs.Text("You have entered the Desert! \n\nVampires are looking for you! \n\nDon't let them find you!", "20px Consolas", "white");
+            this._label = new createjs.Text("You have entered the direct path to tunnel now! \n\nChoose this final path very very carefully!! \n\nIf you choose the correct path now, you will win the game! \n\n All the best!!!!", "20px Consolas", "white");
             this._label.regX = 0;
             this._label.regY = 0;
             this._label.x = 0;
@@ -41,29 +41,29 @@ var scenes;
             stage.addChild(this);
         };
         // PLAY Scene updates here
-        Desert.prototype.update = function () {
+        ChurchTunnel.prototype.update = function () {
         };
         //EVENT HANDLERS ++++++++++++++++++++
         // NEXT Button click event handler
-        Desert.prototype._nextButtonClick = function (event) {
+        ChurchTunnel.prototype._nextButtonClick = function (event) {
             // Switch to the OVER Scene
-            scene = config.Scene.DEADEND4;
+            scene = config.Scene.CHURCH;
             changeScene();
         };
         // BACK Button click event handler
-        Desert.prototype._backButtonClick = function (event) {
+        ChurchTunnel.prototype._backButtonClick = function (event) {
             // Switch to the OVER Scene
-            scene = config.Scene.DEADEND3;
+            scene = config.Scene.DEADEND7;
             changeScene();
         };
         // START Button click event handler
-        Desert.prototype._startButtonClick = function (event) {
+        ChurchTunnel.prototype._startButtonClick = function (event) {
             // Switch to the OVER Scene
-            scene = config.Scene.PLAY;
+            scene = config.Scene.TUNNEL;
             changeScene();
         };
-        return Desert;
+        return ChurchTunnel;
     })(objects.Scene);
-    scenes.Desert = Desert;
+    scenes.ChurchTunnel = ChurchTunnel;
 })(scenes || (scenes = {}));
-//# sourceMappingURL=desert.js.map
+//# sourceMappingURL=churchtunnel.js.map

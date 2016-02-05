@@ -3,20 +3,20 @@ var __extends = (this && this.__extends) || function (d, b) {
     function __() { this.constructor = d; }
     d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 };
-// PLAY SCENE
+// TUNNEL SCENE
 var scenes;
 (function (scenes) {
-    var Play = (function (_super) {
-        __extends(Play, _super);
+    var Tunnel = (function (_super) {
+        __extends(Tunnel, _super);
         // CONSTRUCTOR ++++++++++++++++++++++
-        function Play() {
+        function Tunnel() {
             _super.call(this);
         }
         // PUBLIC METHODS +++++++++++++++++++++
         // Start Method
-        Play.prototype.start = function () {
+        Tunnel.prototype.start = function () {
             // add the PLAY label to the scene
-            this._playLabel = new createjs.Text("You are being chased by vampires! \n\nYour goal for this game is to reach to church before they \n\ncatch you and kill you! \n\nChoose left or right side at this point!", "20px Consolas", "white");
+            this._playLabel = new createjs.Text("Great!!! \n\nYou have entered the tunnel that leads you to the church \n\nChoose your paths carefully ahead!", "20px Consolas", "white");
             this._playLabel.regX = 0;
             this._playLabel.regY = 0;
             this._playLabel.x = 0;
@@ -36,23 +36,23 @@ var scenes;
             stage.addChild(this);
         };
         // PLAY Scene updates here
-        Play.prototype.update = function () {
+        Tunnel.prototype.update = function () {
         };
         //EVENT HANDLERS ++++++++++++++++++++
         // NEXT Button click event handler
-        Play.prototype._nextButtonClick = function (event) {
+        Tunnel.prototype._nextButtonClick = function (event) {
             // Switch to the OVER Scene
-            scene = config.Scene.TUNNEL;
+            scene = config.Scene.LOSTCAVE;
             changeScene();
         };
         // BACK Button click event handler
-        Play.prototype._backButtonClick = function (event) {
+        Tunnel.prototype._backButtonClick = function (event) {
             // Switch to the OVER Scene
-            scene = config.Scene.DARKFOREST;
+            scene = config.Scene.CHURCHTUNNEL;
             changeScene();
         };
-        return Play;
+        return Tunnel;
     })(objects.Scene);
-    scenes.Play = Play;
+    scenes.Tunnel = Tunnel;
 })(scenes || (scenes = {}));
-//# sourceMappingURL=play.js.map
+//# sourceMappingURL=tunnel.js.map

@@ -3,20 +3,20 @@ var __extends = (this && this.__extends) || function (d, b) {
     function __() { this.constructor = d; }
     d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 };
-// OVER SCENE
+// DEADEND 4 SCENE
 var scenes;
 (function (scenes) {
-    var Over = (function (_super) {
-        __extends(Over, _super);
+    var DeadEnd4 = (function (_super) {
+        __extends(DeadEnd4, _super);
         // CONSTRUCTOR ++++++++++++++++++++++
-        function Over() {
+        function DeadEnd4() {
             _super.call(this);
         }
         // PUBLIC METHODS +++++++++++++++++++++
         // Start Method
-        Over.prototype.start = function () {
-            // add the PLAY label to the scene
-            this._overLabel = new createjs.Text("Arrrgghhh!!! They caught you and killed you \n\nGame Over!", "20px Consolas", "white");
+        DeadEnd4.prototype.start = function () {
+            // add the DeadEnd4 label to the scene
+            this._overLabel = new createjs.Text("Arrrgghhh!!! You reached dead end 4! They caught you and killed you \n\nGame Over!", "20px Consolas", "white");
             this._overLabel.regX = 0;
             this._overLabel.regY = 0;
             this._overLabel.x = 0;
@@ -31,17 +31,17 @@ var scenes;
             stage.addChild(this);
         };
         // PLAY Scene updates here
-        Over.prototype.update = function () {
+        DeadEnd4.prototype.update = function () {
         };
         //EVENT HANDLERS ++++++++++++++++++++
         // BACK Button click event handler
-        Over.prototype._backButtonClick = function (event) {
+        DeadEnd4.prototype._backButtonClick = function (event) {
             // Switch to the OVER Scene
-            scene = config.Scene.DARKFOREST;
+            scene = config.Scene.DESERT;
             changeScene();
         };
-        return Over;
+        return DeadEnd4;
     })(objects.Scene);
-    scenes.Over = Over;
+    scenes.DeadEnd4 = DeadEnd4;
 })(scenes || (scenes = {}));
-//# sourceMappingURL=over.js.map
+//# sourceMappingURL=deadend4.js.map

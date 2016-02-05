@@ -12,6 +12,7 @@ var scene:number;
 var menu:scenes.Menu;
 var play:scenes.Play;
 var over:scenes.Over;
+var forest:scenes.DarkForest;
 
 function init():void {
     // create a reference the HTML canvas Element
@@ -90,6 +91,13 @@ function changeScene(): void {
             play = new scenes.Play();
             currentScene = play;
             console.log("Starting PLAY Scene");
+            break;
+       case config.Scene.DARKFOREST:
+            // show the PLAY scene
+            stage.removeAllChildren();
+            forest = new scenes.DarkForest();
+            currentScene = forest;
+            console.log("Starting DARKFOREST Scene");
             break;
         case config.Scene.OVER:
             // show the game OVER scene

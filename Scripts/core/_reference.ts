@@ -10,3 +10,4 @@
 /// <reference path="../scenes/play.ts" />
 /// <reference path="../scenes/menu.ts" />
 /// <reference path="../scenes/darkforest.ts" />
+/// <reference path="../scenes/desert.ts" />

@@ -60,14 +60,14 @@ module scenes {
         // NEXT Button click event handler
         private _nextButtonClick(event: createjs.MouseEvent) {
             // Switch to the OVER Scene
-            scene = config.Scene.LOSTCAVE;
+            scene = config.Scene.CHURCHTUNNEL;
             changeScene();
         }
         
         // BACK Button click event handler
         private _backButtonClick(event: createjs.MouseEvent) {
             // Switch to the OVER Scene
-            scene = config.Scene.CHURCHTUNNEL;
+            scene = config.Scene.LOSTCAVE;
             changeScene();
         }
     }

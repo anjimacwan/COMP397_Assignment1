@@ -42,13 +42,13 @@ var scenes;
         // NEXT Button click event handler
         Tunnel.prototype._nextButtonClick = function (event) {
             // Switch to the OVER Scene
-            scene = config.Scene.LOSTCAVE;
+            scene = config.Scene.CHURCHTUNNEL;
             changeScene();
         };
         // BACK Button click event handler
         Tunnel.prototype._backButtonClick = function (event) {
             // Switch to the OVER Scene
-            scene = config.Scene.CHURCHTUNNEL;
+            scene = config.Scene.LOSTCAVE;
             changeScene();
         };
         return Tunnel;

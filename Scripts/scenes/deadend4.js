@@ -16,7 +16,7 @@ var scenes;
         // Start Method
         DeadEnd4.prototype.start = function () {
             // add the DeadEnd4 label to the scene
-            this._overLabel = new createjs.Text("Arrrgghhh!!! You reached dead end 4! They caught you and killed you \n\nGame Over!", "20px Consolas", "white");
+            this._overLabel = new createjs.Text("Arrrgghhh!!! You reached dead end 4! They caught you and \n\nkilled you \n\nGame Over!", "20px Consolas", "white");
             this._overLabel.regX = 0;
             this._overLabel.regY = 0;
             this._overLabel.x = 0;

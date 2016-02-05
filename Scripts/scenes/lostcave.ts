@@ -46,6 +46,17 @@ module scenes {
             // BACK Button event listener
             this._backButton.on("click", this._backButtonClick, this);
 
+            
+            // add the START button to the DARKFOREST scene
+            this._startButton = new objects.Button(
+                "StartButton",
+                config.Screen.CENTER_X,
+                config.Screen.CENTER_Y + 120);
+            this.addChild(this._startButton);
+           
+            // NEXT Button event listener
+            this._startButton.on("click", this._startButtonClick, this);
+            
             // add this scene to the global stage container
             stage.addChild(this);
         }
@@ -69,6 +80,12 @@ module scenes {
         private _backButtonClick(event: createjs.MouseEvent) {
             // Switch to the OVER Scene
             scene = config.Scene.DEADEND5;
+            changeScene();
+        }
+        
+        private _startButtonClick(event: createjs.MouseEvent) {
+            // Switch to the OVER Scene
+            scene = config.Scene.TUNNEL;
             changeScene();
         }
         

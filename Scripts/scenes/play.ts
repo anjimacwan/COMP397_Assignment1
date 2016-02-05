@@ -17,7 +17,7 @@ module scenes {
         public start(): void {
 
             // add the PLAY label to the scene
-            this._playLabel = new createjs.Text("You are being chased by vampires! \n You need to reach to church before they catch you! \n Choose left or right side at this point!", "20px Consolas", "white");
+            this._playLabel = new createjs.Text("You are being chased by vampires! \n\nYou need to reach to church before they catch you! \n\nChoose left or right side at this point!", "20px Consolas", "white");
             this._playLabel.regX = 0;
             this._playLabel.regY = 0;
             this._playLabel.x = 0;

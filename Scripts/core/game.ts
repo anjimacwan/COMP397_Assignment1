@@ -93,7 +93,7 @@ function changeScene(): void {
             console.log("Starting PLAY Scene");
             break;
        case config.Scene.DARKFOREST:
-            // show the PLAY scene
+            // show the DARKFOREST scene
             stage.removeAllChildren();
             forest = new scenes.DarkForest();
             currentScene = forest;

@@ -42,7 +42,7 @@ var scenes;
         // NEXT Button click event handler
         Play.prototype._nextButtonClick = function (event) {
             // Switch to the OVER Scene
-            scene = config.Scene.OVER;
+            scene = config.Scene.DESERT;
             changeScene();
         };
         // BACK Button click event handler

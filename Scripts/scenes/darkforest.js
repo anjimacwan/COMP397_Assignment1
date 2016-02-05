@@ -15,6 +15,8 @@ var scenes;
         // PUBLIC METHODS +++++++++++++++++++++
         // Start Method
         DarkForest.prototype.start = function () {
+            this._leftCaveImage = new createjs.Bitmap("../../Assets/images/forest.jpg");
+            this.addChild(this._leftCaveImage);
             // add the DARKFOREST label to the scene
             this._label = new createjs.Text("You have entered the DarkForest! \n\nVampires are looking for you! \n\nDon't let them find you!", "20px Consolas", "white");
             this._label.regX = 0;

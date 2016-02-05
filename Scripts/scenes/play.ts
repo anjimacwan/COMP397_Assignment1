@@ -17,11 +17,11 @@ module scenes {
         public start(): void {
 
             // add the PLAY label to the scene
-            this._playLabel = new createjs.Text("You are being chased by vampires! You need to reach to church before they catch you! Choose left or right side at this point!", "20px Consolas", "white");
-            this._playLabel.regX = this._playLabel.getMeasuredWidth() * 0.5;
-            this._playLabel.regY = 120;
-            this._playLabel.x = config.Screen.CENTER_X;
-            this._playLabel.y = 120;
+            this._playLabel = new createjs.Text("You are being chased by vampires! You need to reach to church before they catch you! Choose left or right side at this point!", "10px Consolas", "white");
+            this._playLabel.regX = 0;
+            this._playLabel.regY = 0;
+            this._playLabel.x = 0;
+            this._playLabel.y = 0;
             this.addChild(this._playLabel);
 
             // add the NEXT button to the PLAY scene

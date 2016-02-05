@@ -1,28 +1,30 @@
-// PLAY SCENE
+// DARKFOREST SCENE
+
 module scenes {
-    export class Play extends objects.Scene {
+    export class DarkForest extends objects.Scene {
         //PRIVATE INSTANCE VARIABLES ++++++++++++
-        private _playLabel: createjs.Text;
-        private _nextButton: objects.Button;
-        private _backButton: objects.Button;
+        private _label:createjs.Text;
+        private _startButton:objects.Button;
+        private _nextButton:objects.Button;
+        private _backButton:objects.Button;
         
         // CONSTRUCTOR ++++++++++++++++++++++
         constructor() {
             super();
         }
         
-        // PUBLIC METHODS +++++++++++++++++++++
+       // PUBLIC METHODS +++++++++++++++++++++
         
         // Start Method
         public start(): void {
 
             // add the PLAY label to the scene
-            this._playLabel = new createjs.Text("You are being chased by vampires! \n\nYour goal for this game is to reach to church before they catch you and kill you! \n\nChoose left or right side at this point!", "20px Consolas", "white");
-            this._playLabel.regX = 0;
-            this._playLabel.regY = 0;
-            this._playLabel.x = 0;
-            this._playLabel.y = 0;
-            this.addChild(this._playLabel);
+            this._label = new createjs.Text("You have entered the DarkForest! \n\nVampires are looking for you! \n\nDon't let them find you!", "20px Consolas", "white");
+            this._label.regX = 0;
+            this._label.regY = 0;
+            this._label.x = 0;
+            this._label.y = 0;
+            this.addChild(this._label);
 
             // add the NEXT button to the PLAY scene
             this._nextButton = new objects.Button(
@@ -67,7 +69,7 @@ module scenes {
         // BACK Button click event handler
         private _backButtonClick(event: createjs.MouseEvent) {
             // Switch to the OVER Scene
-            scene = config.Scene.DARKFOREST;
+            scene = config.Scene.OVER;
             changeScene();
         }
     }

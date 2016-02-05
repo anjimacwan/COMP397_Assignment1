@@ -16,11 +16,11 @@ var scenes;
         // Start Method
         Over.prototype.start = function () {
             // add the PLAY label to the scene
-            this._overLabel = new createjs.Text("Over Scene", "60px Consolas", "#000000");
-            this._overLabel.regX = this._overLabel.getMeasuredWidth() * 0.5;
-            this._overLabel.regY = this._overLabel.getMeasuredHeight() * 0.5;
-            this._overLabel.x = config.Screen.CENTER_X;
-            this._overLabel.y = config.Screen.CENTER_Y;
+            this._overLabel = new createjs.Text("Arrrgghhh!!! They caught you and killed you \n\nGame Over!", "20px Consolas", "white");
+            this._overLabel.regX = 0;
+            this._overLabel.regY = 0;
+            this._overLabel.x = 0;
+            this._overLabel.y = 0;
             this.addChild(this._overLabel);
             // add the BACK button to the OVER scene
             this._backButton = new objects.Button("BackButton", config.Screen.CENTER_X, config.Screen.CENTER_Y + 60);
@@ -37,7 +37,7 @@ var scenes;
         // BACK Button click event handler
         Over.prototype._backButtonClick = function (event) {
             // Switch to the OVER Scene
-            scene = config.Scene.PLAY;
+            scene = config.Scene.DARKFOREST;
             changeScene();
         };
         return Over;

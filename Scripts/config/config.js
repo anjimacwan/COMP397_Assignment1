@@ -7,6 +7,8 @@ var config;
         Scene.MENU = 0;
         Scene.PLAY = 1;
         Scene.OVER = 2;
+        Scene.DARKFOREST = 3;
+        Scene.DESERT = 4;
         return Scene;
     })();
     config.Scene = Scene;

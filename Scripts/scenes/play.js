@@ -16,7 +16,7 @@ var scenes;
         // Start Method
         Play.prototype.start = function () {
             // add the PLAY label to the scene
-            this._playLabel = new createjs.Text("You are being chased by vampires! \n\nYour goal for this game is to reach to church before they catch you and kill you! \n\nChoose left or right side at this point!", "20px Consolas", "white");
+            this._playLabel = new createjs.Text("You are being chased by vampires! \n\nYour goal for this game is to reach to church before they \n\ncatch you and kill you! \n\nChoose left or right side at this point!", "20px Consolas", "white");
             this._playLabel.regX = 0;
             this._playLabel.regY = 0;
             this._playLabel.x = 0;

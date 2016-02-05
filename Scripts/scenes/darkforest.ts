@@ -4,7 +4,7 @@ module scenes {
     export class DarkForest extends objects.Scene {
         //PRIVATE INSTANCE VARIABLES ++++++++++++
         private _label:createjs.Text;
-        private _startButton:objects.Button;
+        //private _startButton:objects.Button;
         private _nextButton:objects.Button;
         private _backButton:objects.Button;
         
@@ -18,7 +18,7 @@ module scenes {
         // Start Method
         public start(): void {
 
-            // add the PLAY label to the scene
+            // add the DARKFOREST label to the scene
             this._label = new createjs.Text("You have entered the DarkForest! \n\nVampires are looking for you! \n\nDon't let them find you!", "20px Consolas", "white");
             this._label.regX = 0;
             this._label.regY = 0;
@@ -26,7 +26,7 @@ module scenes {
             this._label.y = 0;
             this.addChild(this._label);
 
-            // add the NEXT button to the PLAY scene
+            // add the NEXT button to the DARKFOREST scene
             this._nextButton = new objects.Button(
                 "NextButton",
                 config.Screen.CENTER_X + 100,
@@ -36,7 +36,7 @@ module scenes {
             // NEXT Button event listener
             this._nextButton.on("click", this._nextButtonClick, this);
 
-            // add the BACK button to the PLAY scene
+            // add the BACK button to the DARKFOREST scene
             this._backButton = new objects.Button(
                 "BackButton",
                 config.Screen.CENTER_X - 100,

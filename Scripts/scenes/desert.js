@@ -35,15 +35,10 @@ var scenes;
             // BACK Button event listener
             this._backButton.on("click", this._backButtonClick, this);
             // add the START button to the DARKFOREST scene
-            this._startButton = new objects.Button("StartButton", config.Screen.CENTER_X, config.Screen.CENTER_Y + 120);
+            this._startButton = new objects.Button("BackButton", config.Screen.CENTER_X, config.Screen.CENTER_Y + 120);
             this.addChild(this._startButton);
             // NEXT Button event listener
-            this._startButton.on("click", this._startButtonClick, this);
-            // add the BACK button to the DARKFOREST scene
-            this._backButton2 = new objects.Button("BackButton", config.Screen.CENTER_X, config.Screen.CENTER_Y + 120);
-            this.addChild(this._backButton2);
-            // NEXT Button event listener
-            this._backButton2.on("click", this._backButton2Click, this);
+            this._startButton.on("click", this._backButton2Click, this);
             // add this scene to the global stage container
             stage.addChild(this);
         };

@@ -26,7 +26,7 @@ module scenes {
 
             // add the NEXT button to the PLAY scene
             this._nextButton = new objects.Button(
-                "NextButton",
+                "RightCaveButton",
                 config.Screen.CENTER_X + 100,
                 config.Screen.CENTER_Y + 60);
             this.addChild(this._nextButton);
@@ -36,7 +36,7 @@ module scenes {
 
             // add the BACK button to the PLAY scene
             this._backButton = new objects.Button(
-                "BackButton",
+                "LeftCaveButton",
                 config.Screen.CENTER_X - 100,
                 config.Screen.CENTER_Y + 60);
             this.addChild(this._backButton);

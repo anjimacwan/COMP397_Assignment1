@@ -15,6 +15,8 @@ var scenes;
         // PUBLIC METHODS +++++++++++++++++++++
         // Start Method
         Desert.prototype.start = function () {
+            this._leftCaveImage = new createjs.Bitmap("../../Assets/images/desert.jpg");
+            this.addChild(this._leftCaveImage);
             // add the DESERT label to the scene
             this._label = new createjs.Text("You have entered the Desert! \n\nVampires are looking for you! \n\nDon't let them find you!", "20px Consolas", "white");
             this._label.regX = 0;

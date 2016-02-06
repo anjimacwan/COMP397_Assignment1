@@ -15,6 +15,8 @@ var scenes;
         // PUBLIC METHODS +++++++++++++++++++++
         // Start Method
         DeadEnd7.prototype.start = function () {
+            this._image = new createjs.Bitmap("../../Assets/images/deadend7.jpg");
+            this.addChild(this._image);
             // add the DeadEnd7 label to the scene
             this._overLabel = new createjs.Text("Arrrgghhh!!! You reached dead end 7! They caught you and \n\nkilled you \n\nGame Over!", "20px Consolas", "white");
             this._overLabel.regX = 0;

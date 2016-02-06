@@ -4,7 +4,7 @@ module scenes {
         //PRIVATE INSTANCE VARIABLES ++++++++++++
         private _overLabel: createjs.Text;
         private _backButton: objects.Button;
-        
+        private _image:createjs.Bitmap;
         // CONSTRUCTOR ++++++++++++++++++++++
         constructor() {
             super();
@@ -14,6 +14,8 @@ module scenes {
         
         // Start Method
         public start(): void {
+            this._image=new createjs.Bitmap("../../Assets/images/deadend7.jpg");
+            this.addChild(this._image);
 
             // add the DeadEnd7 label to the scene
             this._overLabel = new createjs.Text("Arrrgghhh!!! You reached dead end 7! They caught you and \n\nkilled you \n\nGame Over!", "20px Consolas", "white");

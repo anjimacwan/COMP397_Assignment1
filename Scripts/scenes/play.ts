@@ -70,7 +70,7 @@ module scenes {
         // BACK Button click event handler
         private _backButtonClick(event: createjs.MouseEvent) {
             // Switch to the OVER Scene
-            scene = config.Scene.DARKFOREST;
+            scene = config.Scene.LEFTCAVE;
             changeScene();
         }
     }

@@ -50,7 +50,7 @@ var scenes;
         // BACK Button click event handler
         Play.prototype._backButtonClick = function (event) {
             // Switch to the OVER Scene
-            scene = config.Scene.DARKFOREST;
+            scene = config.Scene.LEFTCAVE;
             changeScene();
         };
         return Play;

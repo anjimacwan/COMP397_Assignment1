@@ -5,6 +5,7 @@ module scenes {
         private _playLabel: createjs.Text;
         private _nextButton: objects.Button;
         private _backButton: objects.Button;
+        private _image:createjs.Bitmap;
         
         // CONSTRUCTOR ++++++++++++++++++++++
         constructor() {
@@ -15,7 +16,9 @@ module scenes {
         
         // Start Method
         public start(): void {
-
+            
+            this._image = new createjs.Bitmap("../../Assets/images/mainchoice.jpg");
+            this.addChild(this._image);
             // add the PLAY label to the scene
             this._playLabel = new createjs.Text("You are being chased by vampires! \n\nYour goal for this game is to reach to church before they \n\ncatch you and kill you! \n\nChoose left or right side at this point!", "20px Consolas", "white");
             this._playLabel.regX = 0;

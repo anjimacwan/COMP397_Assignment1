@@ -25,12 +25,12 @@ var scenes;
             this._label.y = 0;
             this.addChild(this._label);
             // add the NEXT button to the DESERT scene
-            this._nextButton = new objects.Button("NextButton", config.Screen.CENTER_X + 100, config.Screen.CENTER_Y + 60);
+            this._nextButton = new objects.Button("RightCaveButton", config.Screen.CENTER_X + 100, config.Screen.CENTER_Y + 60);
             this.addChild(this._nextButton);
             // NEXT Button event listener
             this._nextButton.on("click", this._nextButtonClick, this);
             // add the BACK button to the DARKFOREST scene
-            this._backButton = new objects.Button("BackButton", config.Screen.CENTER_X - 100, config.Screen.CENTER_Y + 60);
+            this._backButton = new objects.Button("LeftCaveButton", config.Screen.CENTER_X - 100, config.Screen.CENTER_Y + 60);
             this.addChild(this._backButton);
             // BACK Button event listener
             this._backButton.on("click", this._backButtonClick, this);
@@ -39,6 +39,11 @@ var scenes;
             this.addChild(this._startButton);
             // NEXT Button event listener
             this._startButton.on("click", this._startButtonClick, this);
+            // add the BACK button to the DARKFOREST scene
+            this._backButton2 = new objects.Button("BackButton", config.Screen.CENTER_X, config.Screen.CENTER_Y + 120);
+            this.addChild(this._backButton2);
+            // NEXT Button event listener
+            this._backButton2.on("click", this._backButton2Click, this);
             // add this scene to the global stage container
             stage.addChild(this);
         };
@@ -59,9 +64,9 @@ var scenes;
             changeScene();
         };
         // START Button click event handler
-        Desert.prototype._startButtonClick = function (event) {
+        Desert.prototype._backButton2Click = function (event) {
             // Switch to the OVER Scene
-            scene = config.Scene.PLAY;
+            scene = config.Scene.LEFTCAVE;
             changeScene();
         };
         return Desert;

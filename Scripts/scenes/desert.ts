@@ -7,6 +7,7 @@ module scenes {
         private _startButton:objects.Button;
         private _nextButton:objects.Button;
         private _backButton:objects.Button;
+        private _backButton2:objects.Button;
         private _leftCaveImage:createjs.Bitmap;
         
         // CONSTRUCTOR ++++++++++++++++++++++
@@ -31,7 +32,7 @@ module scenes {
 
             // add the NEXT button to the DESERT scene
             this._nextButton = new objects.Button(
-                "NextButton",
+                "RightCaveButton",
                 config.Screen.CENTER_X + 100,
                 config.Screen.CENTER_Y + 60);
             this.addChild(this._nextButton);
@@ -41,7 +42,7 @@ module scenes {
 
             // add the BACK button to the DARKFOREST scene
             this._backButton = new objects.Button(
-                "BackButton",
+                "LeftCaveButton",
                 config.Screen.CENTER_X - 100,
                 config.Screen.CENTER_Y + 60);
             this.addChild(this._backButton);
@@ -58,6 +59,17 @@ module scenes {
            
             // NEXT Button event listener
             this._startButton.on("click", this._startButtonClick, this);
+            
+            
+            // add the BACK button to the DARKFOREST scene
+            this._backButton2 = new objects.Button(
+                "BackButton",
+                config.Screen.CENTER_X,
+                config.Screen.CENTER_Y + 120);
+            this.addChild(this._backButton2);
+           
+            // NEXT Button event listener
+            this._backButton2.on("click", this._backButton2Click, this);
 
             // add this scene to the global stage container
             stage.addChild(this);
@@ -85,9 +97,9 @@ module scenes {
             changeScene();
         }
         // START Button click event handler
-        private _startButtonClick(event: createjs.MouseEvent) {
+        private _backButton2Click(event: createjs.MouseEvent) {
             // Switch to the OVER Scene
-            scene = config.Scene.PLAY;
+            scene = config.Scene.LEFTCAVE;
             changeScene();
         }
     }

@@ -30,7 +30,7 @@ module scenes {
 
             // add the NEXT button to the DARKFOREST scene
             this._nextButton = new objects.Button(
-                "NextButton",
+                "RightCaveButton",
                 config.Screen.CENTER_X + 100,
                 config.Screen.CENTER_Y + 60);
             this.addChild(this._nextButton);
@@ -40,7 +40,7 @@ module scenes {
 
             // add the BACK button to the DARKFOREST scene
             this._backButton = new objects.Button(
-                "BackButton",
+                "LeftCaveButton",
                 config.Screen.CENTER_X - 100,
                 config.Screen.CENTER_Y + 60);
             this.addChild(this._backButton);
@@ -50,7 +50,7 @@ module scenes {
 
             // add the START button to the DARKFOREST scene
             this._startButton = new objects.Button(
-                "StartButton",
+                "BackButton",
                 config.Screen.CENTER_X,
                 config.Screen.CENTER_Y + 120);
             this.addChild(this._startButton);
@@ -86,7 +86,7 @@ module scenes {
         // START Button click event handler
         private _startButtonClick(event: createjs.MouseEvent) {
             // Switch to the OVER Scene
-            scene = config.Scene.PLAY;
+            scene = config.Scene.LEFTCAVE;
             changeScene();
         }
     }

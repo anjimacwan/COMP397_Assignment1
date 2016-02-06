@@ -5,6 +5,7 @@ module scenes {
         private _playLabel: createjs.Text;
         private _nextButton: objects.Button;
         private _backButton: objects.Button;
+        private _backButton2:objects.Button;
         private _image:createjs.Bitmap;
         
         // CONSTRUCTOR ++++++++++++++++++++++
@@ -20,7 +21,7 @@ module scenes {
             this._image = new createjs.Bitmap("../../Assets/images/cave1.jpg");
             this.addChild(this._image);
             // add the PLAY label to the scene
-            this._playLabel = new createjs.Text("Yo have entered LeftCave! \n\nMove forward and make clever choices!", "20px Consolas", "white");
+            this._playLabel = new createjs.Text("You have entered LeftCave! \n\nMove forward and make clever choices!", "20px Consolas", "white");
             this._playLabel.regX = 0;
             this._playLabel.regY = 0;
             this._playLabel.x = 0;
@@ -46,6 +47,16 @@ module scenes {
            
             // BACK Button event listener
             this._backButton.on("click", this._backButtonClick, this);
+            
+            // add the BACK button to the PLAY scene
+            this._backButton2 = new objects.Button(
+                "BackButton",
+                config.Screen.CENTER_X,
+                config.Screen.CENTER_Y + 120);
+            this.addChild(this._backButton);
+           
+            // BACK Button event listener
+            this._backButton2.on("click", this._backButton2Click, this);
 
 
             // add this scene to the global stage container
@@ -71,6 +82,13 @@ module scenes {
         private _backButtonClick(event: createjs.MouseEvent) {
             // Switch to the OVER Scene
             scene = config.Scene.DARKFOREST;
+            changeScene();
+        }
+        
+        // BACK Button click event handler
+        private _backButton2Click(event: createjs.MouseEvent) {
+            // Switch to the OVER Scene
+            scene = config.Scene.PLAY;
             changeScene();
         }
     }

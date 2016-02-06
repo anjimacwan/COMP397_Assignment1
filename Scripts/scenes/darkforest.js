@@ -25,17 +25,17 @@ var scenes;
             this._label.y = 0;
             this.addChild(this._label);
             // add the NEXT button to the DARKFOREST scene
-            this._nextButton = new objects.Button("NextButton", config.Screen.CENTER_X + 100, config.Screen.CENTER_Y + 60);
+            this._nextButton = new objects.Button("RightCaveButton", config.Screen.CENTER_X + 100, config.Screen.CENTER_Y + 60);
             this.addChild(this._nextButton);
             // NEXT Button event listener
             this._nextButton.on("click", this._nextButtonClick, this);
             // add the BACK button to the DARKFOREST scene
-            this._backButton = new objects.Button("BackButton", config.Screen.CENTER_X - 100, config.Screen.CENTER_Y + 60);
+            this._backButton = new objects.Button("LeftCaveButton", config.Screen.CENTER_X - 100, config.Screen.CENTER_Y + 60);
             this.addChild(this._backButton);
             // BACK Button event listener
             this._backButton.on("click", this._backButtonClick, this);
             // add the START button to the DARKFOREST scene
-            this._startButton = new objects.Button("StartButton", config.Screen.CENTER_X, config.Screen.CENTER_Y + 120);
+            this._startButton = new objects.Button("BackButton", config.Screen.CENTER_X, config.Screen.CENTER_Y + 120);
             this.addChild(this._startButton);
             // NEXT Button event listener
             this._startButton.on("click", this._startButtonClick, this);
@@ -61,7 +61,7 @@ var scenes;
         // START Button click event handler
         DarkForest.prototype._startButtonClick = function (event) {
             // Switch to the OVER Scene
-            scene = config.Scene.PLAY;
+            scene = config.Scene.LEFTCAVE;
             changeScene();
         };
         return DarkForest;

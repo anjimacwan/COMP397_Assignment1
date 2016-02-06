@@ -53,7 +53,7 @@ module scenes {
                 "BackButton",
                 config.Screen.CENTER_X,
                 config.Screen.CENTER_Y + 120);
-            this.addChild(this._backButton);
+            this.addChild(this._backButton2);
            
             // BACK Button event listener
             this._backButton2.on("click", this._backButton2Click, this);

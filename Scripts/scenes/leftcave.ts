@@ -1,4 +1,4 @@
-// PLAY SCENE
+// LEFTCAVE SCENE
 module scenes {
     export class LeftCave extends objects.Scene {
         //PRIVATE INSTANCE VARIABLES ++++++++++++

@@ -4,6 +4,7 @@ module scenes {
         //PRIVATE INSTANCE VARIABLES ++++++++++++
         private _overLabel: createjs.Text;
         private _startButton:objects.Button;
+        private _image:createjs.Bitmap;
        
         // CONSTRUCTOR ++++++++++++++++++++++
         constructor() {
@@ -14,6 +15,8 @@ module scenes {
         
         // Start Method
         public start(): void {
+            this._image=new createjs.Bitmap("../../Assets/images/church.jpg");
+            this.addChild(this._image);
 
             // add the PLAY label to the scene
             this._overLabel = new createjs.Text("Bravo!!! You are awesome! \n\nYou defeated the blood-suckers!! \n\nCongrats!!!!! \n\nWanna play again?? Click the button below!", "20px Consolas", "white");
@@ -26,7 +29,7 @@ module scenes {
             
             // add the START button to the DARKFOREST scene
             this._startButton = new objects.Button(
-                "StartButton",
+                "StartOverButton",
                 config.Screen.CENTER_X,
                 config.Screen.CENTER_Y + 120);
             this.addChild(this._startButton);

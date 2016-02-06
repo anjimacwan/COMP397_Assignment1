@@ -7,6 +7,7 @@ module scenes {
         private _startButton:objects.Button;
         private _nextButton:objects.Button;
         private _backButton:objects.Button;
+        private _image:createjs.Bitmap;
         
         // CONSTRUCTOR ++++++++++++++++++++++
         constructor() {
@@ -17,9 +18,11 @@ module scenes {
         
         // Start Method
         public start(): void {
-
+            
+            this._image=new createjs.Bitmap("../../Assets/images/lostcave.jpg");
+            this.addChild(this._image);
             // add the DARKFOREST label to the scene
-            this._label = new createjs.Text("You have reached a tunnel!! \n\nYou need to move ahead!!\n\nGo ahead and see what you get!!", "20px Consolas", "white");
+            this._label = new createjs.Text("You have reached next tunnel in the same path!! \n\nYou need to move ahead!!\n\nGo ahead and see what you get!!", "20px Consolas", "white");
             this._label.regX = 0;
             this._label.regY = 0;
             this._label.x = 0;
@@ -28,7 +31,7 @@ module scenes {
 
             // add the NEXT button to the DARKFOREST scene
             this._nextButton = new objects.Button(
-                "NextButton",
+                "RightCaveButton",
                 config.Screen.CENTER_X + 100,
                 config.Screen.CENTER_Y + 60);
             this.addChild(this._nextButton);
@@ -38,7 +41,7 @@ module scenes {
 
             // add the BACK button to the DARKFOREST scene
             this._backButton = new objects.Button(
-                "BackButton",
+                "LeftCaveButton",
                 config.Screen.CENTER_X - 100,
                 config.Screen.CENTER_Y + 60);
             this.addChild(this._backButton);
@@ -49,7 +52,7 @@ module scenes {
             
             // add the START button to the DARKFOREST scene
             this._startButton = new objects.Button(
-                "StartButton",
+                "BackButton",
                 config.Screen.CENTER_X,
                 config.Screen.CENTER_Y + 120);
             this.addChild(this._startButton);

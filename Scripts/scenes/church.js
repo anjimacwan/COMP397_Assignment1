@@ -15,6 +15,8 @@ var scenes;
         // PUBLIC METHODS +++++++++++++++++++++
         // Start Method
         Church.prototype.start = function () {
+            this._image = new createjs.Bitmap("../../Assets/images/church.jpg");
+            this.addChild(this._image);
             // add the PLAY label to the scene
             this._overLabel = new createjs.Text("Bravo!!! You are awesome! \n\nYou defeated the blood-suckers!! \n\nCongrats!!!!! \n\nWanna play again?? Click the button below!", "20px Consolas", "white");
             this._overLabel.regX = 0;
@@ -23,7 +25,7 @@ var scenes;
             this._overLabel.y = 0;
             this.addChild(this._overLabel);
             // add the START button to the DARKFOREST scene
-            this._startButton = new objects.Button("StartButton", config.Screen.CENTER_X, config.Screen.CENTER_Y + 120);
+            this._startButton = new objects.Button("StartOverButton", config.Screen.CENTER_X, config.Screen.CENTER_Y + 120);
             this.addChild(this._startButton);
             // NEXT Button event listener
             this._startButton.on("click", this._startButtonClick, this);

@@ -15,8 +15,10 @@ var scenes;
         // PUBLIC METHODS +++++++++++++++++++++
         // Start Method
         ChurchTunnel.prototype.start = function () {
+            this._image = new createjs.Bitmap("../../Assets/images/churchtunnel.jpg");
+            this.addChild(this._image);
             // add the DESERT label to the scene
-            this._label = new createjs.Text("You have entered the direct path to tunnel now! \n\nChoose this final path very very carefully!! \n\nIf you choose the correct path now, you will win the game! \n\n All the best!!!!", "20px Consolas", "white");
+            this._label = new createjs.Text("You have entered the direct path to church now! \n\nChoose this final path very very carefully!! \n\nIf you choose the correct path now, you will win the game! \n\n All the best!!!!", "20px Consolas", "white");
             this._label.regX = 0;
             this._label.regY = 0;
             this._label.x = 0;
@@ -33,7 +35,7 @@ var scenes;
             // BACK Button event listener
             this._backButton.on("click", this._backButtonClick, this);
             // add the START button to the DARKFOREST scene
-            this._startButton = new objects.Button("StartButton", config.Screen.CENTER_X, config.Screen.CENTER_Y + 120);
+            this._startButton = new objects.Button("BackButton", config.Screen.CENTER_X, config.Screen.CENTER_Y + 120);
             this.addChild(this._startButton);
             // NEXT Button event listener
             this._startButton.on("click", this._startButtonClick, this);

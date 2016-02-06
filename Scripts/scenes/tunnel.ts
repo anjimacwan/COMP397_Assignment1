@@ -5,6 +5,8 @@ module scenes {
         private _playLabel: createjs.Text;
         private _nextButton: objects.Button;
         private _backButton: objects.Button;
+        private _backButton2: objects.Button;
+        private _image:createjs.Bitmap;
         
         // CONSTRUCTOR ++++++++++++++++++++++
         constructor() {
@@ -15,6 +17,9 @@ module scenes {
         
         // Start Method
         public start(): void {
+            
+            this._image = new createjs.Bitmap("../../Assets/images/tunnel.jpg");
+            this.addChild(this._image);
 
             // add the PLAY label to the scene
             this._playLabel = new createjs.Text("Great!!! \n\nYou have entered the tunnel that leads you to the church \n\nChoose your paths carefully ahead!", "20px Consolas", "white");
@@ -26,7 +31,7 @@ module scenes {
 
             // add the NEXT button to the PLAY scene
             this._nextButton = new objects.Button(
-                "NextButton",
+                "RightCaveButton",
                 config.Screen.CENTER_X + 100,
                 config.Screen.CENTER_Y + 60);
             this.addChild(this._nextButton);
@@ -36,14 +41,25 @@ module scenes {
 
             // add the BACK button to the PLAY scene
             this._backButton = new objects.Button(
-                "BackButton",
+                "LeftCaveButton",
                 config.Screen.CENTER_X - 100,
                 config.Screen.CENTER_Y + 60);
             this.addChild(this._backButton);
            
             // BACK Button event listener
             this._backButton.on("click", this._backButtonClick, this);
-
+            
+            
+            
+            // add the BACK button to the PLAY scene
+            this._backButton2 = new objects.Button(
+                "BackButton",
+                config.Screen.CENTER_X - 100,
+                config.Screen.CENTER_Y + 60);
+            this.addChild(this._backButton2);
+           
+            // BACK Button event listener
+            this._backButton2.on("click", this._backButton2Click, this);
 
             // add this scene to the global stage container
             stage.addChild(this);
@@ -68,6 +84,13 @@ module scenes {
         private _backButtonClick(event: createjs.MouseEvent) {
             // Switch to the OVER Scene
             scene = config.Scene.LOSTCAVE;
+            changeScene();
+        }
+        
+        
+        private _backButton2Click(event: createjs.MouseEvent) {
+            // Switch to the OVER Scene
+            scene = config.Scene.PLAY;
             changeScene();
         }
     }

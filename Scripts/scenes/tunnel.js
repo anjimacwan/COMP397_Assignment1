@@ -15,6 +15,8 @@ var scenes;
         // PUBLIC METHODS +++++++++++++++++++++
         // Start Method
         Tunnel.prototype.start = function () {
+            this._image = new createjs.Bitmap("../../Assets/images/tunnel.jpg");
+            this.addChild(this._image);
             // add the PLAY label to the scene
             this._playLabel = new createjs.Text("Great!!! \n\nYou have entered the tunnel that leads you to the church \n\nChoose your paths carefully ahead!", "20px Consolas", "white");
             this._playLabel.regX = 0;
@@ -23,15 +25,20 @@ var scenes;
             this._playLabel.y = 0;
             this.addChild(this._playLabel);
             // add the NEXT button to the PLAY scene
-            this._nextButton = new objects.Button("NextButton", config.Screen.CENTER_X + 100, config.Screen.CENTER_Y + 60);
+            this._nextButton = new objects.Button("RightCaveButton", config.Screen.CENTER_X + 100, config.Screen.CENTER_Y + 60);
             this.addChild(this._nextButton);
             // NEXT Button event listener
             this._nextButton.on("click", this._nextButtonClick, this);
             // add the BACK button to the PLAY scene
-            this._backButton = new objects.Button("BackButton", config.Screen.CENTER_X - 100, config.Screen.CENTER_Y + 60);
+            this._backButton = new objects.Button("LeftCaveButton", config.Screen.CENTER_X - 100, config.Screen.CENTER_Y + 60);
             this.addChild(this._backButton);
             // BACK Button event listener
             this._backButton.on("click", this._backButtonClick, this);
+            // add the BACK button to the PLAY scene
+            this._backButton2 = new objects.Button("BackButton", config.Screen.CENTER_X - 100, config.Screen.CENTER_Y + 60);
+            this.addChild(this._backButton2);
+            // BACK Button event listener
+            this._backButton2.on("click", this._backButton2Click, this);
             // add this scene to the global stage container
             stage.addChild(this);
         };
@@ -49,6 +56,11 @@ var scenes;
         Tunnel.prototype._backButtonClick = function (event) {
             // Switch to the OVER Scene
             scene = config.Scene.LOSTCAVE;
+            changeScene();
+        };
+        Tunnel.prototype._backButton2Click = function (event) {
+            // Switch to the OVER Scene
+            scene = config.Scene.PLAY;
             changeScene();
         };
         return Tunnel;

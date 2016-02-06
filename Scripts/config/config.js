@@ -19,6 +19,7 @@ var config;
         Scene.LOSTCAVE = 5;
         Scene.CHURCHTUNNEL = 6;
         Scene.CHURCH = 14;
+        Scene.LEFTCAVE = 15;
         return Scene;
     })();
     config.Scene = Scene;

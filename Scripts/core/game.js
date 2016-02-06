@@ -21,6 +21,7 @@ var deadEnd4;
 var deadEnd5;
 var deadEnd6;
 var deadEnd7;
+var leftCave;
 function init() {
     // create a reference the HTML canvas Element
     canvas = document.getElementById("canvas");
@@ -169,6 +170,13 @@ function changeScene() {
             churchtunnel = new scenes.ChurchTunnel();
             currentScene = churchtunnel;
             console.log("Starting CHURCHTUNNEL Scene");
+            break;
+        case config.Scene.LEFTCAVE:
+            // show the TUNNEL scene
+            stage.removeAllChildren();
+            leftCave = new scenes.LeftCave();
+            currentScene = leftCave;
+            console.log("Starting LEFTCAVE Scene");
             break;
         case config.Scene.CHURCH:
             // show the CHURCH scene

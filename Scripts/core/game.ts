@@ -24,6 +24,7 @@ var deadEnd4:scenes.DeadEnd4;
 var deadEnd5:scenes.DeadEnd5;
 var deadEnd6:scenes.DeadEnd6;
 var deadEnd7:scenes.DeadEnd7;
+var leftCave:scenes.LeftCave;
 
 
 function init():void {
@@ -187,6 +188,13 @@ function changeScene(): void {
             churchtunnel = new scenes.ChurchTunnel();
             currentScene = churchtunnel;
             console.log("Starting CHURCHTUNNEL Scene");
+            break;
+       case config.Scene.LEFTCAVE:
+            // show the TUNNEL scene
+            stage.removeAllChildren();
+            leftCave = new scenes.LeftCave();
+            currentScene = leftCave;
+            console.log("Starting LEFTCAVE Scene");
             break;
         case config.Scene.CHURCH:
             // show the CHURCH scene

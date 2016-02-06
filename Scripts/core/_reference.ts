@@ -21,3 +21,4 @@
 /// <reference path="../scenes/churchtunnel.ts" />
 /// <reference path="../scenes/lostcave.ts" />
 /// <reference path="../scenes/tunnel.ts" />
+/// <reference path="../scenes/leftcave.ts" />

@@ -17,6 +17,7 @@
         public static LOSTCAVE:number=5;
         public static CHURCHTUNNEL:number=6;
         public static CHURCH:number=14;
+        public static LEFTCAVE:number=15;
     }
     
     
